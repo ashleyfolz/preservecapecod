@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Environmental Conservation on Cape Cod</title>
+    <meta charset="UTF-8">
+    <!-- Link to the stylesheet css -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Navigation and social media links on the sidenav bar -->
+    <div class="sidenav">
+        <img src="capelogo.jpg" alt="Image of Logo" class="logo" width="100" height="100" tabindex="0">
+        <a class="active" href="#Home" tabindex="0">Home</a>
+        <a href="research.html" tabindex="0">Research</a>
+        <a href="news.html" tabindex="0">News</a>
+        <a href="contact_us.html" tabindex="0">Contact Us</a>
+        <div class="social-media-icons">
+            <a href="https://www.facebook.com" tabindex="0"><img src="facebook.jpg" class="fb" alt="Facebook" width="30" height="30"></a>
+            <a href="https://www.twitter.com" tabindex="0"><img src="twitter.png" class="tw" alt="Twitter" width="30" height="30"></a>
+            <a href="https://www.instagram.com" tabindex="0"><img src="instagram.png" class="insta" alt="Instagram" width="30" height="30"></a>
+        </div>
+        <div class="controls">
+            <button id="increase">Font+</button>
+            <button id="decrease">Font-</button>
+        </div>
+        
+    </div>
+    <div class="main">
+        <h1 class="title">Environmental Conservation on Cape Cod</h1>
+        <p class="about">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="about">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="about">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <img src="beach-stairs.jpg" alt="CC landscape" id = "cc_landscape" class="cc_landscape" width="1050" height="300" tabindex="0">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const increaseFontBtn = document.getElementById('increase');
+            const decreaseFontBtn = document.getElementById('decrease');
+            const paragraphs = document.querySelectorAll('.main');
+
+            let fontSize = 1; // initial font size in em
+
+            increaseFontBtn.addEventListener('click', () => {
+                fontSize += 0.1;
+                paragraphs.forEach(p => p.style.fontSize = fontSize + 'em');
+            });
+
+            decreaseFontBtn.addEventListener('click', () => {
+                if (fontSize > 0.5) {
+                    fontSize -= 0.1;
+                    paragraphs.forEach(p => p.style.fontSize = fontSize + 'em');
+                }
+            });
+        });
+    
+      
+
+    </script>
+</body>
+
+</html>

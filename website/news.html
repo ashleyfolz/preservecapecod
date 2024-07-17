@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html>
+
+
+<head> 
+    <title> Environmental Conservation on Cape Cod </title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+
+<body>
+    <div class="sidenav">
+        <img src="capelogo.jpg" alt="Image of Logo" class="logo" width="100" height="100" tabindex="0">
+        <a href="website.html" tabindex="0">Home</a>
+        <a href="research.html" tabindex="0">Research</a>
+        <a href="news.html" tabindex="0">News</a>
+        <a href="contact_us.html" tabindex="0">Contact Us</a>
+        <div class="social-media-icons">
+            <a href="https://www.facebook.com" tabindex="0"><img src="facebook.jpg" class="fb" alt="Facebook" width="30" height="30"></a>
+            <a href="https://www.twitter.com" tabindex="0"><img src="twitter.png" class="tw" alt="Twitter" width="30" height="30"></a>
+            <a href="https://www.instagram.com" tabindex="0"><img src="instagram.png" class="insta" alt="Instagram" width="30" height="30"></a>
+        </div>
+        <div class="controls">
+            <button id="increase">Font+</button>
+            <button id="decrease">Font-</button>
+        </div>
+    </div>
+    <div class="main_body">
+    <h1 class="news_title"> Recent News </h1>
+    <div class="paragraph-image">
+        <h3 class = "article_title" tabindex="0">
+            Article Title
+        </h3>
+        <img class="news_image" id="news_image1" src="shark_view.jpg" alt="arial view of shark" width="100" height="100">
+        <p class="article1"> 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+    <div class="paragraph-image2">
+        <h3 class = "article_title" tabindex="0">
+            Article Title
+        </h3>
+        <img class="news_image" id="news_image2" alt="pipping_clover" src="pipping.jpg" width="100" height="100">
+        <p class="article2"> 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const increaseFontBtn = document.getElementById('increase');
+            const decreaseFontBtn = document.getElementById('decrease');
+            const paragraphs = document.querySelectorAll('.main_body');
+
+            let fontSize = 1; // initial font size in em
+
+            increaseFontBtn.addEventListener('click', () => {
+                fontSize += 0.1;
+                paragraphs.forEach(p => p.style.fontSize = fontSize + 'em');
+            });
+
+            decreaseFontBtn.addEventListener('click', () => {
+                if (fontSize > 0.5) {
+                    fontSize -= 0.1;
+                    paragraphs.forEach(p => p.style.fontSize = fontSize + 'em');
+                }
+            });
+        });
+        const image1 = document.getElementById('news_image1');
+        const image2 = document.getElementById('news_image2');
+
+        image1.onmouseover = function() {
+            image1.classList.add('enlarged');
+            document.querySelector('.paragraph-image').style.overflow = 'visible';
+        };
+
+        image1.onmouseout = function() {
+            image1.classList.remove('enlarged');
+            document.querySelector('.paragraph-image').style.overflow = 'hidden';
+        };
+
+        image2.onmouseover = function() {
+            image2.classList.add('enlarged');
+            document.querySelector('.paragraph-image2').style.overflow = 'visible';
+        };
+
+        image2.onmouseout = function() {
+            image2.classList.remove('enlarged');
+            document.querySelector('.paragraph-image2').style.overflow = 'hidden';
+        };
+        
+
+    </script>
+    
+
+</body>
+
+</html>

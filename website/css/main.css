@@ -1,0 +1,349 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+a:focus,
+button:focus,
+input:focus,
+img:focus {
+    outline: 2px solid #007BFF;
+    outline-offset: 2px;
+}
+
+/* Sidenav styles */
+.sidenav a,
+.social-media-icons a {
+    display: block;
+    margin: 10px 0;
+}
+.controls{
+    margin-left: 20px;
+}
+
+.sidenav {
+    height: 100%; /* stays the full lenth of the screen */
+    width: 150px; /* width of the sidebar */
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: lightblue; 
+    padding-top: 20px; 
+}
+
+/* links inside the navigation bar */
+.sidenav a {
+    padding: 15px 20px; 
+    text-decoration: none; 
+    font-size: 18px; 
+    color: navy; 
+    display: block; 
+}
+/*logo at the top left of the screen - stays there always*/
+.sidenav .logo{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+/*social media icons at the bottom left corner*/
+.sidenav .social-media-icons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sidenav .social-media-icons a {
+    margin: 0px;
+    padding: 2px; /*little spacing between them*/
+}
+.main {
+    margin-left: 170px; /* Add a left margin to account for the fixed sidenav */
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+h1.title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.cc_landscape {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    border: 2px solid navy;
+}
+.main_body{
+    margin-right:10px;
+}
+.main_body_research{
+    margin-right:10px;
+}
+.paragraph-image {
+    border: 1px solid navy; /* Border around the container */
+    margin-left: 175px;
+    padding: 10px; /* Padding inside the container */
+    overflow: hidden; /* Clear floats */
+}
+
+.paragraph-image .news_image {
+    float: left; /* Float the image to the left */
+    margin-right: 10px; /* space between the image and the paragraph */
+    margin-bottom:0px;
+    margin-top:0px;
+    border: 2px solid navy;
+}
+
+.paragraph-image .article1 {
+    margin: 0; /* Remove default margin of the paragraph */
+  
+}
+.paragraph-image .article_title{
+    padding:0px;
+    margin: 0px 0px 5px 0px;
+    color: blue;
+    text-decoration:underline;
+
+}
+.paragraph-image2 {
+    border: 1px solid navy; /* Border around the container */
+    margin-left: 175px;
+    padding: 10px; /* Padding inside the container */
+    overflow: hidden; /* Clear floats */
+}
+
+.paragraph-image2 .news_image {
+    float: right; /* Float the image to the left */
+    margin-left: 10px; /*space between the image and the paragraph */
+    margin-bottom:0px;
+    margin-top:0px;
+    border: 2px solid navy;
+}
+
+.paragraph-image2 .article2 {
+    margin: 0; /* Remove default margin of the paragraph */
+}
+.paragraph-image2 .article_title{
+    padding:0px;
+    margin: 0px 0px 5px 0px;
+    color: blue;
+    text-decoration:underline;
+
+}
+/*entire textbox that is org1*/
+.org1 {
+    border: 1px solid navy; /* Border around the container */
+    margin-left: 175px;
+    padding: 10px; /* Padding inside container */
+    overflow: hidden; 
+    position: relative;
+}
+/*this is the picture of the logo*/
+.org1 .org_logo {
+    float: right; /* Float the image to the left */
+    margin-left: 10px; /* space between the image and the paragraph */
+    margin-bottom:0px;
+    margin-top:0px;
+    border: 2px solid navy;
+    padding: 5px;
+}
+/*overview of the logo*/
+.org1 .org_overview {
+    margin: 0; /* Remove default margin of the paragraph */
+
+}
+.org1 .org_title{
+    padding:0px;
+    margin: 0px 0px 5px 0px;
+
+}
+h1.research_title, h1.news_title{
+    margin-left: 175px;
+}
+.org2 {
+    border: 1px solid navy; /* Border around the container */
+    margin-left: 175px;
+    padding: 10px; /* Padding inside the container */
+    overflow: hidden; 
+    position: relative;
+}
+/*this is the picture of the logo*/
+.org2 .org_logo {
+    float: left; /* Float the image to the left */
+    margin-right: 10px; /* Optional: Add some space between the image and the paragraph */
+    margin-bottom:0px;
+    margin-top:0px;
+    border: 2px solid navy;
+    padding:5px;
+}
+
+.org2 .org_overview {
+    margin: 0; /* Remove default margin of the paragraph */
+    /* You can add more styles to the paragraph if needed */
+}
+.org2 .org_title{
+    padding:0px;
+    margin: 0px 0px 5px 0px;
+
+}
+
+/*entire textbox for org3*/
+.org3 {
+    border: 1px solid navy; /* Border around the container */
+    margin-left: 175px;
+    padding: 10px; /* Padding inside the container */
+    overflow: hidden; /* Clear floats */
+    position: relative;
+}
+
+/*this is the picture of the logo*/
+.org3 .org_logo {
+    float: right; /* Float the image to the left */
+    margin-left: 10px; /* Optional: Add some space between the image and the paragraph */
+    margin-bottom:0px;
+    margin-top:0px;
+    border: 2px solid navy;
+    padding: 5px;
+}
+
+/*this is the text explaining the org*/
+.org3 .org_overview {
+    margin: 0; /* Remove default margin of the paragraph */
+}
+.org3 .org_title{
+    padding:0px;
+    margin: 0px 0px 5px 0px;
+
+}
+.contact{
+    text-align: center;
+    margin-left:175px;
+}
+
+.contact_us {
+    align-items: center; /* Center the items horizontally */
+    margin-left: 175px; /* This may still be needed for layout purposes */
+}
+
+.contact_us .email, .contact_us .description {
+    text-align: left;
+    border: 2px solid black;
+    background-color: gray;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    padding-right: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.contact_us .description{
+    padding-bottom: 100px;
+}
+.enlarged{
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+    z-index: 10;
+    position: relative;
+    overflow: visible;
+
+}
+
+
+/* Media queries for iPad */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .contact, .contact_us, .main, .paragraph-image, .paragraph-image2, .org1, .org2, .org3 {
+        margin-left: 145px; /* Adjust the padding for iPad */
+    }
+    h1.research_title, h1.news_title{
+        margin-left: 145px;
+    }
+    .sidenav {
+        width: 120px; /* Adjust the width of the sidebar for iPad */
+    }
+    .sidenav a {
+        font-size: 16px; /* Adjust font size for iPad */
+    }
+    
+    .logo{
+        width: 80px;
+        height: 80px;
+    }
+    .social-media-icons {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 15px;
+        height: 15px;
+    }
+    .fb, .tw, .insta{
+        width: 20px;
+        height: 20px;
+    }
+    .cc_landscape{
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        align-items: center;
+    }
+}
+
+/* Media queries for iPhone */
+@media only screen and (max-width: 767px) {
+    .contact, .contact_us, .main, .paragraph-image, .paragraph-image2, .org1, .org2, .org3 {
+        margin-left: 105px; /* Adjust the padding for iPhone */
+    }
+    h1.research_title, h1.news_title{
+        margin-left: 105px;
+    }
+    .sidenav {
+        width: 80px; /* Adjust the width of the sidebar for iPhone */
+    }
+    .sidenav a {
+        font-size: 14px; /* Adjust font size for iPhone */
+    }
+    
+    .contact_us .email, .contact_us .description {
+        margin-left: 20px; /* Adjust margin for contact sections on iPhone */
+        margin-right: 20px;
+    }
+    .logo{
+        width: 60px;
+        height: 60px;
+    }
+    .social-media-icons {
+        width: 5px;
+        height: 5px;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .fb, .tw, .insta{
+        width: 20px;
+        height: 20px;
+    }
+    .cc_landscape{
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        align-items: center;
+    }
+}
